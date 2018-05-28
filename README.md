@@ -6,11 +6,11 @@ Från start finns:
 - components-mapp för React-componenter.
 - pages-mapp för varje enskild sida i applikationen. T ex index.js, about.js etc.
 
-## Implementation av redux-store. (alla branhcer)
+## Implementation av redux-store.
 För att förse alla sidor i pages-mappen med store kan man skapa storen i en wrapper-layout (layouts/MainLayout) som innehåller det som är gemensamt för alla sidor, header, footer etc. 
 Varje sida wrappas i denna layout. 
 
-## Implementation av Styled-components (branch: styledComponentsImplementation)
+## Implementation av Styled-components
 För att styled-components ska kunna köras serverside renderat behöver man skapa en custom _document.js fil i /pages-mappen. Där definierar man att alla styled-components i appen ska 
 samlas ihop och renderas i varje sidas <head>. Exemplet är taget från:
 
