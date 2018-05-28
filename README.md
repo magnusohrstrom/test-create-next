@@ -6,11 +6,15 @@ Från start finns:
 - components-mapp för JSX-componenter.
 - pages-mapp för varje enskild sida i applikationen. T ex index.js, about.js etc.
 
-## Implementation av redux-store.
+## Implementation av redux-store. (alla branhcer)
 För att förse alla sidor i pages-mappen med store kan man skapa storen i en wrapper-layout (layouts/MainLayout) som innehåller det som är gemensamt för alla sidor, header, footer etc. 
-Varje sida wrappas i denna layout.
+Varje sida wrappas i denna layout. 
 
- 
+## Implementation av Styled-components (branch: styledComponentsImplementation)
+
+## Implementation av style-jsx (branch: styleJsxImplenentation)
+
+
 
 
 

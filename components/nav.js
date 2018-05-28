@@ -1,10 +1,5 @@
 import Head from './head'
 import Link from 'next/link'
-import styled from 'styled-components';
-
-const StyledUl = styled.ul`
-  background:pink; 
-`;
 
 const links = [
   { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }, { href: '/AboutPage', label:'about'}
@@ -16,12 +11,12 @@ const links = [
 const Nav = () => (
   <nav>
     <ul>
-      <li>
+      <li className="styled-li">
         <Link prefetch href="/">
           <a>Home</a>
         </Link>
       </li>
-      <StyledUl>
+      <ul>
         {links.map(
           ({ key, href, label }) => (
             <li key={key}>
@@ -31,7 +26,7 @@ const Nav = () => (
             </li>
           )
         )}
-      </StyledUl>
+      </ul>
     </ul>
 
     <style jsx>{`
@@ -48,11 +43,14 @@ const Nav = () => (
         justify-content: space-between;
       }
       nav > ul {
-        padding: 4px 16px;
+        padding: 0;
       }
       li {
         display: flex;
         padding: 6px 8px;
+      }
+      .styled-li {
+        background:blue;
       }
       a {
         color: #067df7;

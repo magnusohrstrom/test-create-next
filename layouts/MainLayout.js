@@ -9,10 +9,16 @@ const store = createStore(reducers,composeWithDevTools());
 
 export default ({ children }) => (
     <Provider store = {store}>
-        <div>
+        <div className = "main-container">
          <Head title="Home" />
          <Nav />
             { children }
+            <style jsx>{`
+                .main-container {
+                    height:300rem;
+                    background:#152452;
+                }
+            `}</style>
         </div>
     </Provider>
   )

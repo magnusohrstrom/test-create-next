@@ -2,16 +2,10 @@ import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/nav'
 import React, {Component} from 'react';
+
 //Styled
-import styled from 'styled-components';
 import {connect} from 'react-redux';
 
-
-const StyledArticle= styled.section`
-    background:pink;
-    height:100rem;
-    padding:2rem;
-`;
 class AboutArticle extends Component {
     addDogToState = () => {
         this.props.dispatch({type:'ADD_PUG'});
@@ -26,15 +20,24 @@ class AboutArticle extends Component {
         }); 
         
         return (
-            <StyledArticle>
+            <article >
                 {console.log(this.props)}
 
                 <h1>About dogs:</h1>
-                <button onClick={this.addDogToState}></button>
+                <button  onClick={this.addDogToState}></button>
                 {dogs}
                 <h1>About cats:</h1>
                 {cats}
-           </StyledArticle>
+                <style jsx>{`
+                    article {
+                        background:teal;
+                        padding:1rem;
+                    }
+                    button {
+                        // background: ${props.isActive ? coral : black};
+                    }
+                `}</style>
+           </article>
         )
     }
 }
