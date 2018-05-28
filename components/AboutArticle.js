@@ -9,7 +9,6 @@ import {connect} from 'react-redux';
 
 const StyledArticle= styled.section`
     background:pink;
-    height:100rem;
     padding:2rem;
 `;
 class AboutArticle extends Component {
