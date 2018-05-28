@@ -1,3 +1,21 @@
+## Struktur 
+
+Från start finns: 
+
+- Logik för routing kopplat till länkar i en färdig nav-komponent. 
+- components-mapp för JSX-componenter.
+- pages-mapp för varje enskild sida i applikationen. T ex index.js, about.js etc.
+
+## Implementation av redux-store.
+För att förse alla sidor i pages-mappen med store kan man skapa storen i en wrapper-layout (layouts/MainLayout) som innehåller det som är gemensamt för alla sidor, header, footer etc. 
+Varje sida wrappas i denna layout.
+
+ 
+
+
+
+
+
 This project was bootstrapped with [Create Next App](https://github.com/segmentio/create-next-app).
 
 Find the most recent version of this guide at [here](https://github.com/segmentio/create-next-app/blob/master/lib/templates/default/README.md). And check out [Next.js repo](https://github.com/zeit/next.js) for the most up-to-date info.

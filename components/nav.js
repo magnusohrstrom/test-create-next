@@ -1,5 +1,10 @@
 import Head from './head'
 import Link from 'next/link'
+import styled from 'styled-components';
+
+const StyledUl = styled.ul`
+  background:pink; 
+`;
 
 const links = [
   { href: 'https://github.com/segmentio/create-next-app', label: 'Github' }, { href: '/AboutPage', label:'about'}
@@ -16,17 +21,17 @@ const Nav = () => (
           <a>Home</a>
         </Link>
       </li>
-      <ul>
+      <StyledUl>
         {links.map(
           ({ key, href, label }) => (
             <li key={key}>
-              <Link href={href}>
+              <Link as={label} href={href}>
                 <a>{label}</a>
               </Link>
             </li>
           )
         )}
-      </ul>
+      </StyledUl>
     </ul>
 
     <style jsx>{`
@@ -36,6 +41,7 @@ const Nav = () => (
       }
       nav {
         text-align: center;
+        background:green;
       }
       ul {
         display: flex;
